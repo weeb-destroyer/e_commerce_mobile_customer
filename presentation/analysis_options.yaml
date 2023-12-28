@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - directives_ordering
+    - always_declare_return_types
+    - cancel_subscriptions
+    - close_sinks
+    - comment_references
+    - library_private_types_in_public_api
+    - only_throw_errors
+    - no_leading_underscores_for_library_prefixes
+    - prefer_relative_imports
+    - prefer_single_quotes
+    - avoid_catching_errors
+    - discarded_futures
+    - avoid_dynamic_calls
+    - prefer_void_to_null
+    - avoid_catches_without_on_clauses
+    - avoid_returning_null
+    - avoid_void_async
+    - await_only_futures
+    - cast_nullable_to_non_nullable
