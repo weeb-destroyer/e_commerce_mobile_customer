@@ -1,14 +1,40 @@
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
+import 'widgets/navigation_bar.dart';
+
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Hello World!'),
-      ),
-    );
+    return Scaffold(
+        bottomNavigationBar: CustomNavigationBar(
+          selectedIndex: _selectedIndex,
+          onTabSelected: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+        ),
+        body: const [
+          Center(
+            child: Text('Home'),
+          ),
+          Center(
+            child: Text('Favorites'),
+          ),
+          Center(
+            child: Text('Vouchers'),
+          ),
+          Center(
+            child: Text('Others'),
+          )
+        ][_selectedIndex]);
   }
 }
