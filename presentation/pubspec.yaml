@@ -5,20 +5,26 @@ version: 0.1.0
 
 environment:
   sdk: '>=3.1.2 <4.0.0'
+  flutter: 3.13.5
 
 dependencies:
+  auto_route: ^7.8.4
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.9
+  flutter_svg: 2.0.9
+  get_it: ^7.6.6
+  injectable: ^2.3.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: 2.0.0
   domain:
     path: ../domain
   shared:
     path: ../shared
+  auto_route_generator: ^7.3.2
+  injectable_generator: ^2.4.1
 flutter:
   uses-material-design: true
   assets:
